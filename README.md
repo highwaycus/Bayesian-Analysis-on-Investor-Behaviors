@@ -37,7 +37,7 @@ The date range is 2016/01/04 to 2021/10/29. Target ETF is QQQ, and several varia
 |N |Number of components (stock)|97| 98| 99| 97.81| 1.83|
 
 ### Modeling
-#### Assumptions and Theory
+#### 1. Assumptions and Theory
 The initial idea is that $𝑝𝑟𝑜𝑏_𝑑𝑖𝑓𝑓(𝑑𝑖,𝑡)$ distribute in normal form. 
 But after observing the data (as figure below), I notice that the distributions skewed right, which makes them closer to poisson distribution than normal distribution. Therefore, I think I can use poisson model to represent these distributions, with appropriate parameter values $\lambda$.
 ![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/1_4_3.png)
@@ -63,5 +63,13 @@ For posterior distribution, we know that
 $$p(\lambda_{1},\lambda_{2},M|y_{1},\dots,y_{n})\propto p(\lambda_{1},\lambda_{2},M)p(y_{1},\dots,y_{n}|\lambda_{1},\lambda_{2},M)\propto \lambda_{1}^{a_{1}+\sum_{t=1}^M y_{t}-1} \times e^{-\lambda_{1}(b_{1}+M)}\times \lambda_{2}^{a_{2}+\sum_{t=M+1}^{n}y_{t}-1} \times e^{-\lambda_{2}(b_{2}+n-M)}$$
 
 Do Gibbs sampling for posterior distribution $𝑝\lambda_{1},\lambda_{2},𝑀|𝑦_{1},\dots,𝑦_{𝑛}$:
+$$p(\lambda+{1}|\dots)\sim Gamma(a_{1}+\sum_{t=1}^M y_{t} ,b_{1}+M)$$
+$$p(\lambda+{2}|\dots)\sim Gamma(a_{2}+\sum_{t=M+1}^M y_{t} ,b_{2}+M)$$
 
+#### 2.	Initialization
+For each group $G_{d_{i}}$, we assume $\mu=mean(Y_{t})$,$\sigma=sd(Y_{t})$, and we select values for a,b to fit them. 
+We assume $a_{1}=a_{2}=a=\frac{\mu^2}{\sigma^2}$ , $b_{1}=b_{2}=b=\frac{\mu}{\sigma^2}$.
+The starting value of $\lambda_{1}=\mu$,$\lambda_{2}=\mu$
+
+For example, in $G_{20,1prob}$ case, n=557,$\mu=0.126$,$\sigma=0.106$, the distribution of prior $p(\[ambda_{1})$ is like:
 
