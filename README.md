@@ -46,3 +46,10 @@ For each group $G_{d_i}$, let $T_{d_i}$ be the trading date in which the distrib
 Notice that we will change value of date from “year+month+date” to ordinal interger.
 
 $$M\in\{1,2,\dots,n-1\}$$
+$$y_{d_{i}},t|\lambda_{1},M\sim Poisson(\lambda_{1}),t=1,\dots,M$$
+$$y_{d_{i}},t|\lambda_{2},M\sim Poisson(\lambda_{2}),t=M+1,\dots,n$$
+
+The conjugate priors of $\lambda_{1}$ and $\lambda_{2}$ are
+$$\lambda_{1}\sim 𝐺𝑎𝑚𝑚𝑎(𝑎_{1},𝑏_{1}_$$
+$$\lambda_{2}\sim 𝐺𝑎𝑚𝑚𝑎(𝑎_{2},𝑏_{2})$$
+
