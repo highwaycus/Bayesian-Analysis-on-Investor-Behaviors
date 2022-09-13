@@ -30,6 +30,8 @@ hist = dt.history(period="5d")
 
 ### The description of data
 The date range is 2016/01/04 to 2021/10/29. Target ETF is QQQ, and several variables descriptions are as below:
+
 |var |Description |1st Qu. |Median |3rd Qu.| Mean|SD|
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
 |price |Daily close price of QQQ|136.43| 173.32| 241.32| 197.01| 82.20|
 |N |Number of components (stock)|97| 98| 99| 97.81| 1.83|
