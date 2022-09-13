@@ -90,4 +90,18 @@ In $G_{20},1prob$ case, the posterior densities of $\lambda_{1}$ and $\lambda_{2
 
 PMF of Change Point is as below:
 
-![image]
+![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/2_4_2.png)
+
+We notice that data indexes around 340(2020/07/24) to 430(2021/04/20) have some high probabilities. 
+During this period, the US government announced the second and third Economic Impact Payments, 
+which were considered as possible factor that changed the investors behaviors.
+
+If we plot the point estimates as below, we can see that after date index of 400, the probabilities have a higher mean.
+
+![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/2_4_3.png)
+
+### Discussion and Implications
+So in $G_{20},1prob$ case, it looks like the parameter $\lambda$ increase after around September 2020. 
+If this is true, it means the average of probabilities that “QQQ ma3 price will decrease tomorrow” increase in the second period. 
+This does not directly mean QQQ price is more likely to crash after September 2020. 
+It may indicate that stocks are more likely to shape “significant” down signals, which usually result from more significant fluctuations, which result from more active investor behaviors.
