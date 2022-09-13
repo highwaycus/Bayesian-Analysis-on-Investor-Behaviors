@@ -72,7 +72,7 @@ For each group $G_{d_{i}}$, we assume $\mu=mean(Y_{t})$, $\sigma=sd(Y_{t})$, and
 We assume $a_{1}=a_{2}=a=\frac{\mu^2}{\sigma^2}$ , $b_{1}=b_{2}=b=\frac{\mu}{\sigma^2}$.
 The starting value of $\lambda_{1}=\mu$, $\lambda_{2}=\mu$
 
-For example, in $G_{20,1prob}$ case, $n=557$, $\mu=0.126$, $\sigma=0.106$, the distribution of prior $p(\lambda_{1})$ is like:
+For example, in $G_{20},1prob$ ($G_{20}$ represents the group of invester with local extreme equals to 20, which we can consider as longer time stock holders) case, $n=557$, $\mu=0.126$, $\sigma=0.106$, the distribution of prior $p(\lambda_{1})$ is like:
 
 ![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/2_1_1.png)
 
