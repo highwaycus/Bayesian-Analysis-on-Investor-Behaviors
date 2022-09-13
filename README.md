@@ -84,4 +84,4 @@ After Gibbs sampling, we set first 100 times as burn-in sampling and do MCMC.
 ### Summary
 In $G_{20},1prob$ case, the posterior densities of $\lambda_{1}$ and $\lambda_{2}$ are as below:
 
-
+![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/2_4_1.png)
