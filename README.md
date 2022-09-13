@@ -110,3 +110,23 @@ In $G_{20},2prob$ case, the two $\lambda$ do not change much.
 Maybe $\lambda_{2}$ is slightly smaller than $\lambda_{1}$, 
 but there is no significant date point that has high PMF of change point. 
 Therefore, the model does not give us great confidence that $G_{20},2prob$ has change its distribution along times.
+
+![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/2_5_1.png)
+
+![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/2_5_2.png)
+
+What intuition can we get from combining the results of $G_{20},1prob$ and $G_{20},2prob$? 
+Group $G_{20}$ represents the behaviors of relatively long-term stockholders, 
+we may conclude that after the shock and mass in stock market in 2020, 
+these investors are more sensitive (or active) when meet a possible price-decreasing event, 
+while they still maintain their patience when a boost signal is coming. 
+
+Now let’s see what happen to other case. For Group $G_{3}$ and $G_{5}$, 
+which represents the group of investors who tend to hold stock for only short time, does not appear significant difference between $\lambda_{1}$ and $\lambda_{2}$. 
+
+For Group $G_{8}$ and $G_{13}$, it has similar results with Group $G_{20}$: 
+the distribution of 1_prob change ($\lambda_{2}\gtr\lambda_{1}$) while the 2_prob does not show significant change in distribution parameters. 
+And the change points for 1_prob are also similar to what we obtained in $G_{20}$ experiment.
+
+From the results of our experiments, we can conclude that the possible reason that K chart model lost its prediction power after September 2020 is the change of behaviors of the long-term investors toward price-decreasing events. 
+They become more conservative (or say, sensitive) toward the events that may cause to decreasing in price. Or we can say, they become more risk-averse toward possible loss.
