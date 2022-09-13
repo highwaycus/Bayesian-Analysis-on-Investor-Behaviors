@@ -40,6 +40,7 @@ The date range is 2016/01/04 to 2021/10/29. Target ETF is QQQ, and several varia
 #### 1. Assumptions and Theory
 The initial idea is that $𝑝𝑟𝑜𝑏_𝑑𝑖𝑓𝑓(𝑑𝑖,𝑡)$ distribute in normal form. 
 But after observing the data (as figure below), I notice that the distributions skewed right, which makes them closer to poisson distribution than normal distribution. Therefore, I think I can use poisson model to represent these distributions, with appropriate parameter values $\lambda$.
+
 ![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/1_4_3.png)
 
 For each group $G_{d_i}$, let $T_{d_i}$ be the trading date in which the distribution of $Y$ change. $Y$ is $1prob_{di}$ or $2prob_{di}$. 
@@ -72,6 +73,7 @@ We assume $a_{1}=a_{2}=a=\frac{\mu^2}{\sigma^2}$ , $b_{1}=b_{2}=b=\frac{\mu}{\si
 The starting value of $\lambda_{1}=\mu$, $\lambda_{2}=\mu$
 
 For example, in $G_{20,1prob}$ case, $n=557$, $\mu=0.126$, $\sigma=0.106$, the distribution of prior $p(\lambda_{1})$ is like:
+
 ![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/2_1_1.png)
 
 #### 3. Gibbs Sampling and MCMC
@@ -85,3 +87,7 @@ After Gibbs sampling, we set first 100 times as burn-in sampling and do MCMC.
 In $G_{20},1prob$ case, the posterior densities of $\lambda_{1}$ and $\lambda_{2}$ are as below:
 
 ![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/2_4_1.png)
+
+PMF of Change Point is as below:
+
+![image]
