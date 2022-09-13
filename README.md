@@ -6,8 +6,8 @@ In a short word, I want to know if the stock investors change change their behav
 In my previous project, k-chart indicator for etf1market, Our team designed a model (k-chart model) to estimate the probabilities of price goes up and down for a stock.
 By observing the past data, I can compute a criterion to determine the prediction. 
 For example, if the model output is (0.3, 0.2, 0.5), which represents probabilities of down, up, not clear (remain), and the prediction is
-$$𝑝𝑟𝑖𝑐𝑒 𝑢𝑝 𝑖𝑓Pr(𝑑𝑜𝑤𝑛)−Pr(𝑢𝑝)<0.1$$ 
-$$𝑝𝑟𝑖𝑐𝑒 𝑑𝑜𝑤𝑛 𝑖𝑓Pr(𝑑𝑜𝑤𝑛)−Pr(𝑢𝑝)≥0.1$$
+$$𝑝𝑟𝑖𝑐𝑒\quad 𝑢𝑝\quad 𝑖𝑓\quad Pr(𝑑𝑜𝑤𝑛)−Pr(𝑢𝑝)<0.1$$ 
+$$𝑝𝑟𝑖𝑐𝑒\quad 𝑑𝑜𝑤𝑛\quad 𝑖𝑓\quad Pr(𝑑𝑜𝑤𝑛)−Pr(𝑢𝑝)≥0.1$$
 The model remained 0.7 accurate rate since 2015. 
 However, after the eruption of Covid-19, we observe that the algorithm become more “inaccurate”. 
 More specifically, it looks like the weights for the different investor groups have changed. 
