@@ -105,3 +105,8 @@ So in $G_{20},1prob$ case, it looks like the parameter $\lambda$ increase after 
 If this is true, it means the average of probabilities that “QQQ ma3 price will decrease tomorrow” increase in the second period. 
 This does not directly mean QQQ price is more likely to crash after September 2020. 
 It may indicate that stocks are more likely to shape “significant” down signals, which usually result from more significant fluctuations, which result from more active investor behaviors.
+
+In $G_{20},2prob$ case, the two $\lambda$ do not change much. 
+Maybe $\lambda_{2}$ is slightly smaller than $\lambda_{1}$, 
+but there is no significant date point that has high PMF of change point. 
+Therefore, the model does not give us great confidence that $G_{20},2prob$ has change its distribution along times.
