@@ -42,7 +42,7 @@ The initial idea is that $𝑝𝑟𝑜𝑏_𝑑𝑖𝑓𝑓(𝑑𝑖,𝑡)$ dist
 But after observing the data (as figure below), I notice that the distributions skewed right, which makes them closer to poisson distribution than normal distribution. Therefore, I think I can use poisson model to represent these distributions, with appropriate parameter values $\lambda$.
 ![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/1_4_3.png)
 
-For each group $G_{d_i}$, let $T_(d_i)$ be the trading date in which the distribution of $Y$ change. $Y$ is $1prob_di$ or $2prob_di$. 
+For each group $G_{d_i}$, let $T_{d_i}$ be the trading date in which the distribution of $Y$ change. $Y$ is $1prob_{di}$ or $2prob_{di}$. 
 Notice that we will change value of date from “year+month+date” to ordinal interger.
 
-$$M\in\{1,2,\dot,n-1\}$$
+$$M\in\{1,2,\dots,n-1\}$$
