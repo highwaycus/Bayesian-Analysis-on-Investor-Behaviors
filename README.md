@@ -78,4 +78,10 @@ For example, in $G_{20,1prob}$ case, $n=557$, $\mu=0.126$, $\sigma=0.106$, the d
 
 Do the sampling for $1000$ times. 
 In each iteration, we resample $\lambda_{1}$  ,$\lambda_{2}$ from Gamma distribution $Gamma(a_{1}+lowersum_{m},b_{1}+m)$ and $Gamma(a_{2}+uppersum_{m},b_{2}+n-m)$. 
-We calculate $b^new=((\log⁡(\lambda_{1})+\log⁡(\lambda_{2})))/2\times \sum^n y_{t} +(\lambda_{2}-\lambda_{1})\times n/2$ , 
+We calculate $b^{new}=((\log⁡(\lambda_{1})+\log⁡(\lambda_{2})))/2\times \sum^n y_{t} +(\lambda_{2}-\lambda_{1})\times n/2$.
+After Gibbs sampling, we set first 100 times as burn-in sampling and do MCMC.
+
+### Summary
+In $G_{20},1prob$ case, the posterior densities of $\lambda_{1}$ and $\lambda_{2}$ are as below:
+
+
