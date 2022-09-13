@@ -60,5 +60,5 @@ $$p_{m}=\frac{1}{n-1}\quad for\quad m=1,\dots,n-1$$
 
 For posterior distribution, we know that
 
-$$p(\lambda_{1},\lambda_{2},M|y_{1},\dots,y_{n})\propto p(\lambda_{1},\lambda_{2},M)p(y_{1},\dots,y_{n}|\lambda_{1},\lambda_{2},M)\propto \lambda_{1}^{a_{1}+\sum_{t=1}^{M}y_{t}-1} \times e^{-\lambda_{1}(b_{1}+M) }\times \lambda_{2}^{a_{2}+\sum_{t=M+1}^{n}y_{t}-1}\times e^{-\lambda_{2}(b_{2}+n-M)}$$
+$$p(\lambda_{1},\lambda_{2},M|y_{1},\dots,y_{n})\propto p(\lambda_{1},\lambda_{2},M)p(y_{1},\dots,y_{n}|\lambda_{1},\lambda_{2},M)\propto \lambda_{1}^{a_{1}+\sum_{t=1}^{M}y_{t}-1} \times e^{-\lambda_{1}(b_{1}+M)}\times \lambda_{2}^{a_{2}+\sum_{t=M+1}^{n}y_{t}-1}\times e^{-\lambda_{2}(b_{2}+n-M)}$$
 
