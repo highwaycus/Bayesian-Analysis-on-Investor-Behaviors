@@ -73,3 +73,7 @@ The starting value of $\lambda_{1}=\mu$, $\lambda_{2}=\mu$
 
 For example, in $G_{20,1prob}$ case, $n=557$, $\mu=0.126$, $\sigma=0.106$, the distribution of prior $p(\lambda_{1})$ is like:
 ![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/2_1_1.png)
+
+#### 3. Gibbs Sampling and MCMC
+
+
