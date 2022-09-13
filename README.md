@@ -69,7 +69,7 @@ $$p(\lambda+{2}|\dots)\sim Gamma(a_{2}+\sum_{t=M+1}^M y_{t} ,b_{2}+M)$$
 #### 2.	Initialization
 For each group $G_{d_{i}}$, we assume $\mu=mean(Y_{t})$, $\sigma=sd(Y_{t})$, and we select values for a,b to fit them. 
 We assume $a_{1}=a_{2}=a=\frac{\mu^2}{\sigma^2}$ , $b_{1}=b_{2}=b=\frac{\mu}{\sigma^2}$.
-The starting value of $\lambda_{1}=\mu$,$\lambda_{2}=\mu$
+The starting value of $\lambda_{1}=\mu$, $\lambda_{2}=\mu$
 
-For example, in $G_{20,1prob}$ case, n=557,$\mu=0.126$,$\sigma=0.106$, the distribution of prior $p(\[ambda_{1})$ is like:
+For example, in $G_{20,1prob}$ case, n=557, $\mu=0.126$, $\sigma=0.106$, the distribution of prior $p(\ambda_{1})$ is like:
 
