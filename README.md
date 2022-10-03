@@ -1,5 +1,5 @@
 # Bayesian-Analysis-on-Investor-Behaviors
-
+ 
 ### Introduction
 In a short word, I want to know if the stock investors change change their behaviors in different periods.
 
