@@ -38,7 +38,7 @@ The date range is 2016/01/04 to 2021/10/29. Target ETF is QQQ, and several varia
 
 ### Modeling
 #### 1. Assumptions and Theory
-The initial idea is that $𝑝𝑟𝑜𝑏_𝑑𝑖𝑓𝑓(𝑑𝑖,𝑡)$ distribute in normal form. 
+The initial idea is that $𝑝𝑟𝑜𝑏_{𝑑𝑖𝑓𝑓}(𝑑𝑖,𝑡)$ distribute in normal form. 
 But after observing the data (as figure below), I notice that the distributions skewed right, which makes them closer to poisson distribution than normal distribution. Therefore, I think I can use poisson model to represent these distributions, with appropriate parameter values $\lambda$.
 
 ![image](https://github.com/highwaycus/Bayesian-Analysis-on-Investor-Behaviors/blob/main/1_4_3.png)
