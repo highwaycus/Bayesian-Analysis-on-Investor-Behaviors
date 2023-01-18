@@ -125,7 +125,7 @@ Now let’s see what happen to other case. For Group $G_{3}$ and $G_{5}$,
 which represents the group of investors who tend to hold stock for only short time, does not appear significant difference between $\lambda_{1}$ and $\lambda_{2}$. 
 
 For Group $G_{8}$ and $G_{13}$, it has similar results with Group $G_{20}$: 
-the distribution of 1_prob change ( $\lambda_{2}\gtr\lambda_{1}$ ) while the 2_prob does not show significant change in distribution parameters. 
+the distribution of 1_prob change ( $\lambda_{2}>\lambda_{1}$ ) while the 2_prob does not show significant change in distribution parameters. 
 And the change points for 1_prob are also similar to what we obtained in $G_{20}$ experiment.
 
 From the results of our experiments, we can conclude that the possible reason that K chart model lost its prediction power after September 2020 is the change of behaviors of the long-term investors toward price-decreasing events. 
