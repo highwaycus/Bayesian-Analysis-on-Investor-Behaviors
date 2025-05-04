@@ -13,7 +13,7 @@ for(ei in ei_list){
 
 # Draw Distribution
 
-density_compare <- function(var_name=prob_diff){
+density_compare <- function(var_name = 'prob_diff'){
   ei=20
   load_df <-paste0('Local_Extrema_',ei,'/QQQ_combination.csv')
   ei_data <- read.csv(load_df)
