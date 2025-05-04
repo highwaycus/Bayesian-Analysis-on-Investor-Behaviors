@@ -10,7 +10,7 @@ We employ a Bayesian changepoint model using a Gibbs sampler to infer:
 - Poisson rates within each segment
 - Posterior distributions for model parameters
 
-The model assumes that the observed counts \( y_1, y_2, ..., y_T \) are generated from a piecewise Poisson process, with segment-specific rates \( $\lambda_1$, $\lambda_2$, ..., $\lambda_K$ \) for K changepoints. A conjugate Gamma prior is used for each Poisson rate, and changepoint locations are assigned a uniform prior.
+The model assumes that the observed counts \( y_{1}, y_{2}, ..., y_{T} \) are generated from a piecewise Poisson process, with segment-specific rates \( $\lambda_1$, $\lambda_2$, ..., $\lambda_K$ \) for K changepoints. A conjugate Gamma prior is used for each Poisson rate, and changepoint locations are assigned a uniform prior.
 
 ## Implementation
 
