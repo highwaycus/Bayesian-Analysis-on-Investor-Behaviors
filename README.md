@@ -1,33 +1,52 @@
 # Bayesian Changepoint Detection in Investor Behavior
 
-We aim to detect structural changes in investor behavior toward the QQQ ETF by modeling daily transaction count data as a time series of Poisson-distributed observations. These changepoints may reflect shifts in market sentiment, news-driven reactions, or behavioral regime switches among retail or institutional investors.
+This project uses Bayesian changepoint detection to find shifts in daily QQQ transaction activity. A custom Gibbs sampler models the counts as a piecewise Poisson process and estimates where the underlying transaction rate changes.
 
-## Methodology
+## What I wanted to understand
 
-We employ a Bayesian changepoint model using a Gibbs sampler to infer:
+Investor activity does not stay at one level forever. I wanted to identify the points where the behavior appears to change instead of forcing one model to describe the entire time series.
 
-- The number and location of changepoints
-- Poisson rates within each segment
-- Posterior distributions for model parameters
+## Model
 
-The model assumes that the observed counts \( $y_1$, $y_2$, ..., $y_T$ \) are generated from a piecewise Poisson process, with segment-specific rates \( $\lambda_1$, $\lambda_2$, ..., $\lambda_K$ \) for K changepoints. A conjugate Gamma prior is used for each Poisson rate, and changepoint locations are assigned a uniform prior.
+Let the observed daily transaction counts be \(y_1, \ldots, y_T\). The model assumes one changepoint \(\tau\):
+
+\[
+y_t \sim
+\begin{cases}
+\text{Poisson}(\lambda_1), & t \le \tau \\
+\text{Poisson}(\lambda_2), & t > \tau
+\end{cases}
+\]
+
+The Poisson rates use Gamma priors, and the changepoint uses a uniform prior:
+
+\[
+\lambda_1, \lambda_2 \sim \text{Gamma}(\alpha, \beta),
+\qquad
+\tau \sim \text{Uniform}(1, T)
+\]
 
 ## Implementation
 
-The model is implemented in R using custom Gibbs sampling steps:
+The Gibbs sampler iteratively updates:
 
-- Segment boundaries are updated using conditional posterior distributions.
-- Poisson rates are sampled from their full conditional Gamma distributions.
-- Posterior summaries (mean changepoint locations, credible intervals) are derived from the Gibbs output.
+1. \(\lambda_1\), using observations before the changepoint
+2. \(\lambda_2\), using observations after the changepoint
+3. \(\tau\), using its conditional posterior distribution
 
-## Preliminary Results
+The implementation also includes:
 
-The model detects significant changepoints in the QQQ transaction time series, particularly in periods coinciding with major macroeconomic
+- Trace plots for convergence checks
+- Posterior summaries of the changepoint
+- Visualization of the transaction series with estimated change locations
 
-## Next Steps
+## Current output
 
-- Refine priors using empirical Bayes or hierarchical modeling.
-- Compare models with varying numbers of changepoints using marginal likelihood or WAIC.
-- Extend to non-homogeneous Poisson or Negative Binomial models to account for overdispersion.
-- Visualize changepoint posterior samples and overlay them with price/volume series.
+The model produces posterior estimates for changepoints in the QQQ transaction-count series. Connecting those changes to specific market events still requires separate validation.
 
+## Next steps
+
+- Extend the model to multiple changepoints
+- Compare the result with frequentist methods
+- Test alternative count models, such as the negative binomial
+- Connect detected changes with market events and sentiment data
