@@ -8,31 +8,31 @@ Investor activity does not stay at one level forever. I wanted to identify the p
 
 ## Model
 
-Let the observed daily transaction counts be (y_1, ldots, y_T). The model assumes one changepoint (	au):
+Let the observed daily transaction counts be \(y_1, \ldots, y_T\). The model assumes one changepoint \(\tau\):
 
-[
-y_t sim
-egin{cases}
-	ext{Poisson}(lambda_1), & t le 	au \
-	ext{Poisson}(lambda_2), & t > 	au
-end{cases}
-]
+\[
+y_t \sim
+\begin{cases}
+\text{Poisson}(\lambda_1), & t \le \tau \\
+\text{Poisson}(\lambda_2), & t > \tau
+\end{cases}
+\]
 
 The Poisson rates use Gamma priors, and the changepoint uses a uniform prior:
 
-[
-lambda_1, lambda_2 sim 	ext{Gamma}(alpha, eta),
-qquad
-	au sim 	ext{Uniform}(1, T)
-]
+\[
+\lambda_1, \lambda_2 \sim \text{Gamma}(\alpha, \beta),
+\qquad
+\tau \sim \text{Uniform}(1, T)
+\]
 
 ## Implementation
 
 The Gibbs sampler iteratively updates:
 
-1. (lambda_1), using observations before the changepoint
-2. (lambda_2), using observations after the changepoint
-3. (	au), using its conditional posterior distribution
+1. \(\lambda_1\), using observations before the changepoint
+2. \(\lambda_2\), using observations after the changepoint
+3. \(\tau\), using its conditional posterior distribution
 
 The implementation also includes:
 
